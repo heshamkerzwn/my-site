@@ -12,9 +12,9 @@ let form = document.querySelector("#form");
 
 p.onclick = () => {
   mainPage.classList.add("show-main");
-  aboutMe.classList.add("show-about");
-  information.classList.add("show-info");
-  formPage.classList.add("show-form");
+  aboutMe.classList.toggle("show-about");
+  information.classList.toggle("show-info");
+  formPage.classList.toggle("show-form");
   navCont.classList.add("show-nav");
 };
 
@@ -30,7 +30,7 @@ main.onclick = () => {
 about.onclick = () => {
   aboutMe.classList.add("visibile");
   body.classList.remove("overflow");
-  aboutMe.classList.toggle("show-about");
+  aboutMe.classList.remove("show-about");
   navCont.classList.toggle("show-nav");
   mainPage.classList.remove("visibile");
   information.classList.remove("visibile");
@@ -39,7 +39,7 @@ about.onclick = () => {
 info.onclick = () => {
   information.classList.add("visibile");
   body.classList.add("overflow");
-  information.classList.toggle("show-info");
+  information.classList.remove("show-info");
   navCont.classList.toggle("show-nav");
   aboutMe.classList.remove("visibile");
   mainPage.classList.remove("visibile");
@@ -48,10 +48,9 @@ info.onclick = () => {
 form.onclick = () => {
   formPage.classList.add("visibile");
   body.classList.add("overflow");
-  formPage.classList.toggle("show-form");
+  formPage.classList.remove("show-form");
   navCont.classList.toggle("show-nav");
   aboutMe.classList.remove("visibile");
   information.classList.remove("visibile");
   mainPage.classList.remove("visibile");
-  console.log("click");
 };
